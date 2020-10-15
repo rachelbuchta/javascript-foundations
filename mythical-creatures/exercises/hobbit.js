@@ -1,9 +1,14 @@
 class Hobbit {
-  constructor(name, age, adult, old) {
+  constructor(name, age, adult, old, hasRing) {
     this.name = name;
     this.age = 0;
     this.adult = adult;
-    this.old = old;
+    this.old = false;
+    if(name === "Frodo") {
+    this.hasRing = true;
+  } else {
+    this.hasRing = false;
+  }
 
   }
 
@@ -14,21 +19,12 @@ class Hobbit {
       this.adult = false;
     } else {
       this.adult = true;
-    };
-    if(this.age <= 100) {
-      this.old = false;
-    } else {
+    }
+    if(this.age > 100) {
       this.old = true;
     }
-  };
-};
-
-
-
-
-
-
-
+  }
+}
 
 
 
